@@ -1,0 +1,114 @@
+
+body {
+    background: linear-gradient(135deg, #003b25, #087044, #002b1b);
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    margin: 0;
+}
+
+header {
+    background-color: #002719;
+    padding: 20px;
+    border-bottom: 2px solid gold;
+}
+
+h1 {
+    color: gold;
+    font-size: 25px;
+}
+
+h2 {
+    color: #ffe28a;
+    font-size: 35px;
+    margin-top: 40px;
+}
+
+main {
+    padding: 30px;
+}
+
+.arvore {
+    font-size: 110px;
+    animation: girar 3s infinite,
+               brilhar 2s infinite alternate;
+}
+
+@keyframes girar {
+    0% { transform: rotate(-8deg); }
+    50% { transform: rotate(8deg); }
+    100% { transform: rotate(-8deg); }
+}
+
+@keyframes brilhar {
+    from { opacity: 0.6; }
+    to { opacity: 1; }
+}
+
+.mensagem {
+    font-size: 22px;
+    color: white;
+    animation: subir 2s infinite,
+               piscar 2s infinite alternate;
+}
+
+@keyframes subir {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes piscar {
+    from { color: white; }
+    to { color: gold; }
+}
+
+.estrela {
+    font-size: 45px;
+    animation: rodar 3s infinite linear;
+}
+
+@keyframes rodar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+footer {
+    background-color: #002719;
+    padding: 20px;
+    color: gold;
+    border-top: 2px solid gold;
+    margin-top: 40px;
+}
+
+
+.neve {
+    position: fixed;
+    top: -30px;
+    left: 10%;
+    color: white;
+    font-size: 25px;
+    animation: cair 6s linear infinite;
+    pointer-events: none;
+    
+}
+
+.neve2 { left: 25%; animation-delay: 2s; }
+.neve3 { left: 45%; animation-delay: 4s; }
+.neve4 { left: 65%; animation-delay: 1s; }
+.neve5 { left: 80%; animation-delay: 3s; }
+.neve6 { left: 95%; animation-delay: 5s; }
+.neve6 { left: 35%; animation-delay: 3s; }
+.neve6 { left: 15%; animation-delay: 2s; }
+
+@keyframes cair {
+    from {
+        top: -30px;
+        transform: translateX(0);
+    }
+
+    to {
+        top: 100vh;
+        transform: translateX(40px);
+    }
+}
